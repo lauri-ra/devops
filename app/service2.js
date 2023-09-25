@@ -54,7 +54,9 @@ setTimeout(() => {
 			}, 1000);
 		} else {
 			// Parse the new log text together
-			const remoteAddress = 'Service 1 address';
+			const remoteAddress =
+				request.headers['x-forwarded-for'] ||
+				request.socket.remoteAddress;
 			const text = data.replace(/\n/g, '');
 			const newLogText = text + ' ' + remoteAddress + '\n';
 
