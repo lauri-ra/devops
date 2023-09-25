@@ -6,7 +6,7 @@ import os
 counter = 1
 
 # URL for service 2
-service2_url = "http://localhost:8000"
+service2_url = "http://localhost:8000/"
 
 # Path for logfile
 logpath = "../logs/service1.log"
@@ -34,7 +34,7 @@ with open(logpath, "w") as logfile:
 
         # Send log message over to service 2
         try:
-            response = requests.post(service2_url, data=text)
+            response = requests.post(service2_url, json={"text": text})
             response.raise_for_status()
         except Exception as error:
             # If sending fails, write an error message to the log
@@ -47,7 +47,7 @@ with open(logpath, "w") as logfile:
     logfile.write("STOP\n")
 
     # Send STOP signal to service 2
-    requests.post(service2_url, data="STOP")
+    requests.post(service2_url, json={"text": "STOP"})
 
 # Close the log file and exit
 logfile.close()

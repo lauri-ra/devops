@@ -1,0 +1,15 @@
+{
+	"name": "devops",
+	"version": "1.0.0",
+	"description": "Repository for COMP.SE.140 DevOps course",
+	"main": "service2.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"express": "^4.18.2"
+	},
+	"type": "module"
+}
