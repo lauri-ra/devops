@@ -1,0 +1,10 @@
+FROM python:3.9
+
+WORKDIR /service1
+
+COPY ./service1/service1.py ./service1.py
+COPY ./service1/requirements.txt ./requirements.txt
+
+RUN pip install -r requirements.txt
+
+CMD [ "python", "service1.py" ]

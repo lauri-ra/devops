@@ -6,7 +6,7 @@ import os
 counter = 1
 
 # URL for service 2
-service2_url = "http://localhost:8000/"
+service2_url = "http://service2:8000/"
 
 # Path for logfile
 logpath = "../logs/service1.log"
