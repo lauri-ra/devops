@@ -33,7 +33,7 @@ else:
         new_logfile.close()
 
 # Open the logfile and start writing
-with open(logpath, "w") as logfile:
+with open(logpath, "w", buffering=1) as logfile:
     for _ in range(20):
         # Wait for the 2s interval
         time.sleep(2)
@@ -52,6 +52,9 @@ with open(logpath, "w") as logfile:
 
             # Write log message to the file
             logfile.write(text)
+            # Added flush so that instead of waiting for the buffer to fill up
+            # or file closure, writes happen instantly
+            logfile.flush()
         except Exception as error:
             # If sending fails, write an error message to the log
             logfile.write(f"Error: {str(error)}\n")
@@ -61,6 +64,7 @@ with open(logpath, "w") as logfile:
 
     # Write STOP to the log file
     logfile.write("STOP\n")
+    logfile.flush()
 
     # Send STOP signal to service 2
     requests.post(service2_url, json={"text": "STOP"})
