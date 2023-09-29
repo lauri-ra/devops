@@ -1,0 +1,5 @@
+NETWORK ID     NAME                DRIVER    SCOPE
+c8527280ce51   bridge              bridge    local
+49b1ab69235a   devops_ex1network   bridge    local
+055b52967ece   host                host      local
+0b49cd400e9d   none                null      local
