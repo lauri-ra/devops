@@ -35,7 +35,7 @@ setTimeout(() => {
 	initializeLogFile(LOGPATH);
 
 	app.listen(PORT, () => {
-		console.log(`Server running on port ${PORT}`);
+		console.log(`Service 2 running on port ${PORT}`);
 	});
 
 	// Route for receiving data from service 1

@@ -1,41 +1,21 @@
-1 2023-09-28T11:02:51.%fZ http://service2:8000/
-Error: HTTPConnectionPool(host='service2', port=8000): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffffa379edf0>: Failed to establish a new connection: [Errno 111] Connection refused'))
-2 2023-09-28T11:02:51.%fZ http://service2:8000/
-Error: HTTPConnectionPool(host='service2', port=8000): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffffa37c37f0>: Failed to establish a new connection: [Errno 111] Connection refused'))
-3 2023-09-28T11:02:51.%fZ http://service2:8000/
-Error: HTTPConnectionPool(host='service2', port=8000): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffffa3752190>: Failed to establish a new connection: [Errno 111] Connection refused'))
-4 2023-09-28T11:02:51.%fZ http://service2:8000/
-Error: HTTPConnectionPool(host='service2', port=8000): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffffa3752af0>: Failed to establish a new connection: [Errno 111] Connection refused'))
-5 2023-09-28T11:02:51.%fZ http://service2:8000/
-Error: HTTPConnectionPool(host='service2', port=8000): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffffa37c3850>: Failed to establish a new connection: [Errno 111] Connection refused'))
-6 2023-09-28T11:02:51.%fZ http://service2:8000/
-Error: HTTPConnectionPool(host='service2', port=8000): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffffa37e17c0>: Failed to establish a new connection: [Errno 111] Connection refused'))
-7 2023-09-28T11:02:51.%fZ http://service2:8000/
-Error: HTTPConnectionPool(host='service2', port=8000): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffffa37521f0>: Failed to establish a new connection: [Errno 111] Connection refused'))
-8 2023-09-28T11:02:51.%fZ http://service2:8000/
-Error: HTTPConnectionPool(host='service2', port=8000): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffffa375c490>: Failed to establish a new connection: [Errno 111] Connection refused'))
-9 2023-09-28T11:02:51.%fZ http://service2:8000/
-Error: HTTPConnectionPool(host='service2', port=8000): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffffa375ce50>: Failed to establish a new connection: [Errno 111] Connection refused'))
-10 2023-09-28T11:02:51.%fZ http://service2:8000/
-Error: HTTPConnectionPool(host='service2', port=8000): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffffa379ea30>: Failed to establish a new connection: [Errno 111] Connection refused'))
-11 2023-09-28T11:02:51.%fZ http://service2:8000/
-Error: HTTPConnectionPool(host='service2', port=8000): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffffa3752dc0>: Failed to establish a new connection: [Errno 111] Connection refused'))
-12 2023-09-28T11:02:51.%fZ http://service2:8000/
-Error: HTTPConnectionPool(host='service2', port=8000): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffffa37528e0>: Failed to establish a new connection: [Errno 111] Connection refused'))
-13 2023-09-28T11:02:51.%fZ http://service2:8000/
-Error: HTTPConnectionPool(host='service2', port=8000): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffffa37645e0>: Failed to establish a new connection: [Errno 111] Connection refused'))
-14 2023-09-28T11:02:51.%fZ http://service2:8000/
-Error: HTTPConnectionPool(host='service2', port=8000): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffffa3764f40>: Failed to establish a new connection: [Errno 111] Connection refused'))
-15 2023-09-28T11:02:51.%fZ http://service2:8000/
-Error: HTTPConnectionPool(host='service2', port=8000): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffffa3764e20>: Failed to establish a new connection: [Errno 111] Connection refused'))
-16 2023-09-28T11:02:51.%fZ http://service2:8000/
-Error: HTTPConnectionPool(host='service2', port=8000): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffffa3764370>: Failed to establish a new connection: [Errno 111] Connection refused'))
-17 2023-09-28T11:02:51.%fZ http://service2:8000/
-Error: HTTPConnectionPool(host='service2', port=8000): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffffa37524c0>: Failed to establish a new connection: [Errno 111] Connection refused'))
-18 2023-09-28T11:02:51.%fZ http://service2:8000/
-Error: HTTPConnectionPool(host='service2', port=8000): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffffa37ee190>: Failed to establish a new connection: [Errno 111] Connection refused'))
-19 2023-09-28T11:02:51.%fZ http://service2:8000/
-Error: HTTPConnectionPool(host='service2', port=8000): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffffa379e640>: Failed to establish a new connection: [Errno 111] Connection refused'))
-20 2023-09-28T11:02:51.%fZ http://service2:8000/
-Error: HTTPConnectionPool(host='service2', port=8000): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffffa37668e0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+1 2023-09-29T23:53:46.816Z 172.19.0.2:8000
+2 2023-09-29T23:53:48.852Z 172.19.0.2:8000
+3 2023-09-29T23:53:50.859Z 172.19.0.2:8000
+4 2023-09-29T23:53:52.881Z 172.19.0.2:8000
+5 2023-09-29T23:53:54.899Z 172.19.0.2:8000
+6 2023-09-29T23:53:56.920Z 172.19.0.2:8000
+7 2023-09-29T23:53:58.952Z 172.19.0.2:8000
+8 2023-09-29T23:54:00.974Z 172.19.0.2:8000
+9 2023-09-29T23:54:02.979Z 172.19.0.2:8000
+10 2023-09-29T23:54:04.989Z 172.19.0.2:8000
+11 2023-09-29T23:54:06.996Z 172.19.0.2:8000
+12 2023-09-29T23:54:09.019Z 172.19.0.2:8000
+13 2023-09-29T23:54:11.041Z 172.19.0.2:8000
+14 2023-09-29T23:54:13.062Z 172.19.0.2:8000
+15 2023-09-29T23:54:15.081Z 172.19.0.2:8000
+16 2023-09-29T23:54:17.098Z 172.19.0.2:8000
+17 2023-09-29T23:54:19.117Z 172.19.0.2:8000
+18 2023-09-29T23:54:21.133Z 172.19.0.2:8000
+19 2023-09-29T23:54:23.150Z 172.19.0.2:8000
+20 2023-09-29T23:54:25.166Z 172.19.0.2:8000
 STOP
