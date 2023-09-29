@@ -8,6 +8,8 @@ services:
       - ./logs:/logs
     networks:
       - ex1network
+    depends_on:
+      - service2
   service2:
     build:
       context: ./
