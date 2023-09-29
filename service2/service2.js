@@ -53,12 +53,17 @@ setTimeout(() => {
 				process.exit();
 			}, 1000);
 		} else {
-			// Parse the new log text together
+			// Get the address and port from service 1 request
 			const remoteAddress =
 				request.headers['x-forwarded-for'] ||
 				request.socket.remoteAddress;
+
+			const remotePort = request.socket.remotePort;
+
+			// Parse the new log text together
 			const text = data.replace(/\n/g, '');
-			const newLogText = text + ' ' + remoteAddress + '\n';
+			const newLogText =
+				text + ' ' + remoteAddress + ':' + remotePort + '\n';
 
 			// Write the data to the logfile
 			writeToFile(newLogText);
