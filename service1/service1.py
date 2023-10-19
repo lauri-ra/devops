@@ -8,7 +8,8 @@ from datetime import datetime, timezone, timedelta
 counter = 1
 
 # ip address and URL for service 2
-address = socket.gethostbyname("service2")
+# address = socket.gethostbyname("service2")
+address = 'localhost'
 service2_url = f"http://{address}:8000/"
 
 # Offset for +3 UTC
