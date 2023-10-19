@@ -17,7 +17,7 @@ offset = timedelta(hours=3)
 
 # Connect to RabbitMQ server
 connection = pika.BlockingConnection(pika.ConnectionParameters('localhost'))
-channel = connection.channel
+channel = connection.channel()
 
 # Bind exchnages for different topics
 channel.exchange_declare(exchange='message', exchange_type='topic')
