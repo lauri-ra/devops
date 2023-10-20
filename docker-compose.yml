@@ -1,23 +1,27 @@
 version: '3.8'
 services:
-  service1:
+  service1.laurira:
     build:
       context: ./
       dockerfile: Dockerfile.service1
-    volumes:
-      - ./logs:/logs
     networks:
       - ex1network
     depends_on:
       - service2
-  service2:
+  service2.laurira:
     build:
       context: ./
       dockerfile: Dockerfile.service2
-    volumes:
-      - ./logs:/logs
     networks:
       - ex1network
+  monitor.laurira:
+    build:
+      context: ./
+      dockerfile: Dockerfile.monitor
+    networks:
+      - ex1network
+    ports:
+      -"8087:8087"
 
 networks:
   ex1network:

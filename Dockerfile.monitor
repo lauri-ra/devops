@@ -1,0 +1,11 @@
+FROM node:16
+
+WORKDIR /monitor
+
+COPY ./monitor/monitor.js ./monitor.js
+COPY ./monitor/package.json ./package.json
+COPY ./monitor/package-lock.json ./package-lock.json
+
+RUN npm install
+
+CMD [ "node", "monitor.js" ]
