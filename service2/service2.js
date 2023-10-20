@@ -19,7 +19,7 @@ setTimeout(() => {
 			throw error;
 		}
 
-		const channel = connection.createChannel();
+		channel = connection.createChannel();
 		console.log('created amqp connection');
 
 		// Assert exchanges for topics "message" and "log"
@@ -62,5 +62,6 @@ setTimeout(() => {
 
 		// Send the parsed text to the broker
 		channel.publish('log', 'monitor', Buffer.from(newLogText));
+		response.end();
 	});
 }, 2000);
