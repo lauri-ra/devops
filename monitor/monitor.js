@@ -5,11 +5,26 @@ const app = express();
 app.use(express.json());
 
 const PORT = 8087;
+let logMessages = [];
 
 app.listen(PORT, () => {
-	console.log(`monitor listening to port ${PORT}`);
+	console.log(`Monitor listening to port ${PORT}`);
 });
 
-app.get('/ping', (request, response) => {
-	response.send('pong');
+amqp.connect('amqp://localhost', (error, connection) => {
+	if (error) {
+		throw error;
+	}
+
+	const channel = connection.createChannel();
+
+	channel.consume('logQueue', (message) => {
+		const logMessage = message.content.toString();
+		logMessages.push(logMessage);
+	});
+});
+
+app.get('/', (request, response) => {
+	console.log('log message array:', logMessages);
+	response.send(logMessages);
 });

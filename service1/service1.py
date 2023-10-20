@@ -23,6 +23,8 @@ channel = connection.channel()
 channel.exchange_declare(exchange='message', exchange_type='topic')
 channel.exchange_declare(exchange='log', exchange_type='topic')
 
+print('service 1 starting...')
+
 # Open the logfile and start writing
 for _ in range(20):
     # Wait for the 2s interval
@@ -57,6 +59,8 @@ for _ in range(20):
 
 # After 20 rounds -> send stop to monitor
 channel.basic_publish(exchange='log', routing_key='monitor', body='SND STOP')
+
+print('service 1 stopped')
 
 # TODO: remove before submit
 exit(0)

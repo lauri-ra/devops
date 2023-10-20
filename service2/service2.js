@@ -20,7 +20,7 @@ setTimeout(() => {
 		}
 
 		channel = connection.createChannel();
-		console.log('created amqp connection');
+		console.log('amqp connection for service 2 active');
 
 		// Assert exchanges for topics "message" and "log"
 		channel.assertExchange('message', 'topic', { durable: false });
