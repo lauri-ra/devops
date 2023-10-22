@@ -8,15 +8,15 @@ from datetime import datetime, timezone, timedelta
 counter = 1
 
 # ip address and URL for service 2
-# address = socket.gethostbyname("service2")
-address = 'localhost'
+address = socket.gethostbyname("service2.laurira")
+# address = 'localhost'
 service2_url = f"http://{address}:8000/"
 
 # Offset for +3 UTC
 offset = timedelta(hours=3)
 
 # Connect to RabbitMQ server
-connection = pika.BlockingConnection(pika.ConnectionParameters('localhost'))
+connection = pika.BlockingConnection(pika.ConnectionParameters('rabbitmq.laurira'))
 channel = connection.channel()
 
 # Bind exchnages for different topics

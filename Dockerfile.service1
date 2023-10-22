@@ -7,4 +7,8 @@ COPY ./service1/requirements.txt ./requirements.txt
 
 RUN pip install -r requirements.txt
 
-CMD [ "python", "service1.py" ]
+COPY ./utils/wait-for-it.sh ./service1/wait-for-it.sh
+RUN chmod +x ./service1/wait-for-it.sh
+
+# CMD [ "python", "service1.py" ]
+CMD ["./service1/wait-for-it.sh", "rabbitmq:5672", "--", "python", "service1.py"]

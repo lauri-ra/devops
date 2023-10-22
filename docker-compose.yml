@@ -1,27 +1,30 @@
 version: '3.8'
 services:
+  rabbitmq:
+    image: rabbitmq:3
+    container_name: rabbitmq.laurira
+    networks:
+      - ex2network
   service1.laurira:
     build:
       context: ./
       dockerfile: Dockerfile.service1
     networks:
-      - ex1network
-    depends_on:
-      - service2
+      - ex2network
   service2.laurira:
     build:
       context: ./
       dockerfile: Dockerfile.service2
     networks:
-      - ex1network
+      - ex2network
   monitor.laurira:
     build:
       context: ./
       dockerfile: Dockerfile.monitor
     networks:
-      - ex1network
+      - ex2network
     ports:
-      -"8087:8087"
+      - "8087:8087"
 
 networks:
-  ex1network:
+  ex2network:

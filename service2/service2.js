@@ -14,7 +14,7 @@ setTimeout(() => {
 	});
 
 	// Create amqp connection
-	amqp.connect('amqp://localhost', (error, connection) => {
+	amqp.connect('amqp://rabbitmq.laurira', (error, connection) => {
 		if (error) {
 			throw error;
 		}

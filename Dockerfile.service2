@@ -8,6 +8,10 @@ COPY ./service2/package-lock.json ./package-lock.json
 
 RUN npm install
 
+COPY ./utils/wait-for-it.sh ./service2/wait-for-it.sh
+RUN chmod +x ./service2/wait-for-it.sh
+
 EXPOSE 8000
 
-CMD [ "node", "service2.js" ]
+# CMD [ "node", "service2.js" ]
+CMD ["./service2/wait-for-it.sh", "rabbitmq:5672", "--", "node", "service2.js"]

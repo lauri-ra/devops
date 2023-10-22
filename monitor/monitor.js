@@ -11,12 +11,16 @@ app.listen(PORT, () => {
 	console.log(`Monitor listening to port ${PORT}`);
 });
 
-amqp.connect('amqp://localhost', (error, connection) => {
+amqp.connect('amqp://rabbitmq.laurira', (error, connection) => {
 	if (error) {
 		throw error;
 	}
 
 	const channel = connection.createChannel();
+
+	channel.assertExchange('log', 'topic', { durable: false });
+	channel.assertQueue('logQueue', { durable: false });
+	channel.bindQueue('logQueue', 'log', 'monitor');
 
 	channel.consume('logQueue', (message) => {
 		const logMessage = message.content.toString();
