@@ -13,4 +13,5 @@ RUN chmod +x ./service2/wait-for-it.sh
 
 EXPOSE 8000
 
+# Wait for rabbitmq to be up
 CMD ["./service2/wait-for-it.sh", "rabbitmq:5672", "--timeout=0", "--", "node", "service2.js"]

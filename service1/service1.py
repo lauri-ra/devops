@@ -63,7 +63,7 @@ for _ in range(20):
     counter += 1
 
 # After 20 rounds -> send stop to monitor
-channel.basic_publish(exchange='log', routing_key='monitor', body='SND STOP')
+channel.basic_publish(exchange='log', routing_key='monitor', body='SND STOP' + '\n')
 
 # Close the connection and wait for the SIGTERM signal from docker-compose down
 connection.close()
