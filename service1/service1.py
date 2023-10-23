@@ -9,7 +9,6 @@ counter = 1
 
 # ip address and URL for service 2
 address = socket.gethostbyname("service2.laurira")
-# address = 'localhost'
 service2_url = f"http://{address}:8000/"
 
 # Offset for +3 UTC
@@ -35,7 +34,7 @@ for _ in range(20):
     timestamp = current_time.strftime('%Y-%m-%dT%H:%M:%S.%f')[:-3] + 'Z'
 
     # Compose the message text
-    message = f'SND {counter} {timestamp} {address}:8000\n'
+    message = f'SND {counter} {timestamp} {address}:8000'
 
     try:
         # Send message to broker for service 2
@@ -60,7 +59,7 @@ for _ in range(20):
 # After 20 rounds -> send stop to monitor
 channel.basic_publish(exchange='log', routing_key='monitor', body='SND STOP')
 
-print('service 1 stopped')
+print('service 1 ran succesfully')
 
 # TODO: remove before submit
 exit(0)

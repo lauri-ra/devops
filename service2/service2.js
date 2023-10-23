@@ -38,7 +38,7 @@ setTimeout(() => {
 		channel.consume('msgQueue', (message) => {
 			// Parse the received text with "MSG"
 			const msgContent = message.content.toString();
-			const newMsg = msgContent.replace(/\n/g, '') + ' MSG\n';
+			const newMsg = msgContent.replace(/\n/g, '') + ' MSG';
 
 			// Send the new text back to broker with topic "log"
 			channel.publish('log', 'monitor', Buffer.from(newMsg));
@@ -58,7 +58,7 @@ setTimeout(() => {
 
 		// Parse the new log text together
 		const text = data.replace(/\n/g, '');
-		const newLogText = text + ' ' + remoteAddress + ':' + remotePort + '\n';
+		const newLogText = text + ' ' + remoteAddress + ':' + remotePort;
 
 		// Send the parsed text to the broker
 		channel.publish('log', 'monitor', Buffer.from(newLogText));

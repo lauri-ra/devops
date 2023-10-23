@@ -29,6 +29,7 @@ amqp.connect('amqp://rabbitmq.laurira', (error, connection) => {
 });
 
 app.get('/', (request, response) => {
-	console.log('log message array:', logMessages);
-	response.send(logMessages);
+	response.setHeader('Content-Type', 'text/plain');
+
+	response.send(logMessages.join('\n'));
 });
