@@ -64,4 +64,10 @@ setTimeout(() => {
 		channel.publish('log', 'monitor', Buffer.from(newLogText));
 		response.end();
 	});
+
+	// Close the connection & exit on command
+	process.on('SIGTERM', () => {
+		channel.close();
+		process.exit(0);
+	});
 }, 2000);

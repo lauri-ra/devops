@@ -2,7 +2,15 @@ import time
 import requests
 import pika
 import socket
+import sys
+import signal
 from datetime import datetime, timezone, timedelta
+
+# Signal handle for the termination signal
+def signal_handler(signal, frame):
+    sys.exit(0)
+
+signal.signal(signal.SIGTERM, signal_handler)
 
 # Counter for rounds
 counter = 1
@@ -21,8 +29,6 @@ channel = connection.channel()
 # Bind exchnages for different topics
 channel.exchange_declare(exchange='message', exchange_type='topic')
 channel.exchange_declare(exchange='log', exchange_type='topic')
-
-print('service 1 starting...')
 
 # Open the logfile and start writing
 for _ in range(20):
@@ -59,7 +65,6 @@ for _ in range(20):
 # After 20 rounds -> send stop to monitor
 channel.basic_publish(exchange='log', routing_key='monitor', body='SND STOP')
 
-print('service 1 ran succesfully')
-
-# TODO: remove before submit
-exit(0)
+# Close the connection and wait for the SIGTERM signal from docker-compose down
+connection.close()
+signal.pause()
