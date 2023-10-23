@@ -13,4 +13,4 @@ RUN chmod +x ./service2/wait-for-it.sh
 
 EXPOSE 8000
 
-CMD ["./service2/wait-for-it.sh", "rabbitmq:5672", "--", "node", "service2.js"]
+CMD ["./service2/wait-for-it.sh", "rabbitmq:5672", "--timeout=0", "--", "node", "service2.js"]
