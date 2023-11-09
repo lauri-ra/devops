@@ -1,8 +1,8 @@
 {
-	"name": "devops",
+	"name": "service",
 	"version": "1.0.0",
-	"description": "Repository for COMP.SE.140 DevOps course",
-	"main": "service2.js",
+	"description": "",
+	"main": "service.js",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
