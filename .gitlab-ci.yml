@@ -1,25 +1,13 @@
-image: docker-compose:latest
-
-services:
-  - docker:dind
-
 stages:
   - build
-  - test
-  - deploy
 
 build:
   stage: build
+  image: docker/compose
+  services:
+    - docker:dind
   script:
-    - docker-compose build
+    - docker-compose up --build
 
-test:
-  stage: test
-  script:
-    - docker-compose run --rm service2.laurira npm test
-
-deploy:
-  stage: deploy
-  script:
-    - docker-compose up -d
-
+after_script:
+  - docker-compose down
