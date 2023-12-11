@@ -1,0 +1,19 @@
+stages:
+  - build
+  - test
+  - deploy
+
+build:
+  stage: build
+  script:
+    - echo "build phase"
+
+test:
+  stage: test
+  script:
+    - ehco "test phase"
+
+deploy:
+  stage: deploy
+  script:
+    - echo "deploy phase"
