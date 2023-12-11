@@ -6,14 +6,15 @@ stages:
 build:
   stage: build
   script:
-    - echo "build phase"
+    - docker-compose build
 
 test:
   stage: test
   script:
-    - ehco "test phase"
+    - docker-compose run --rm service2.laurira npm test
 
 deploy:
   stage: deploy
   script:
-    - echo "deploy phase"
+    - docker-compose up -d
+
