@@ -18,5 +18,7 @@ test:
 deploy:
   stage: deploy
   script:
-    - docker-compose up
+    - docker-compose up --build
     - echo "deployment phase here"
+  dependencies:
+    - build
