@@ -1,12 +1,16 @@
-image: docker/compose:latest
+default:
+  image: docker/compose:latest
+  services:
+    - docker:dind
+  before_script:
+    - docker info
 
-stages:
-  - build
+variables:
+  DOCKER_HOST: tcp://docker:2375/
+  DOCKER_TLS_CERTDIR: "/certs"
 
 build:
   stage: build
-  services:
-    - docker:dind
   script:
     - docker-compose up --build
 
