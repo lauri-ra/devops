@@ -1,6 +1,9 @@
 stages:
   - build
 
+before_script:
+  - apk add docker-compose
+
 build:
   stage: build
   script:
