@@ -2,11 +2,21 @@ image: docker:latest
 
 stages:
   - build
+  - test
+  - deploy
 
 build:
   stage: build
   script:
     - docker-compose up --build
 
-after_script:
-  - docker-compose down
+test:
+  stage: test
+  script:
+    - echo "test phase here"
+
+deploy:
+  stage: deploy
+  script:
+    - docker-compose down
+    - echo "deployment phase here"
